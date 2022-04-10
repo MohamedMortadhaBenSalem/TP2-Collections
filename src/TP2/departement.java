@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class departement {
+public class departement implements Comparable<departement>{
 	private int idDep;
 	private int Capacity;
 	Set<employe> LEmployes;
@@ -62,6 +62,19 @@ public class departement {
 	    return treeSet.last();
 			}
 	
+
+	@Override
+	public int compareTo(departement o) {
+		if(this.Capacity>o.getCapacity())
+		return 1;
+		else if(this.Capacity<o.getCapacity())
+			return -1;
+		else
+			return 0;
+	}
+	
+	
+
 	
 
 	
